@@ -1,12 +1,12 @@
 import Vue from "vue"
 import VueRouter from "vue-router"
 
-const ContentManage = import("../")
+const ContentManage = import("../pages/content-manage/index.vue")
 
 const routes = [
   {
     path: "/",
-    component: Home,
+    component: ContentManage,
   },
 ]
 

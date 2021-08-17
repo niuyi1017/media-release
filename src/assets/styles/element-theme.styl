@@ -1,0 +1,33 @@
+@import "./variables.styl"
+
+// 面包屑导航
+.el-breadcrumb
+  .is-link:hover
+    color: $cl-red !important
+
+// 标签页
+.el-tabs__nav
+  transform: translateX(30px) !important;
+.el-tabs__item:hover
+  color: $cl-red
+.el-tabs__item.is-active
+  color: $cl-red
+.el-tabs__active-bar
+  background: $cl-red
+.el-tabs__item
+  height 55px
+  line-height: 55px
+.el-tabs__header
+  margin-bottom: 0
+.el-tabs__active-bar
+  height 4px  
+
+// 单选框
+.el-radio__input.is-checked .el-radio__inner
+  background $cl-red 
+  border-color $cl-red
+.el-radio__inner:hover
+  border-color $cl-red
+.el-radio__input.is-checked+.el-radio__label
+  color $cl-red
+

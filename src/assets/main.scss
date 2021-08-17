@@ -1,0 +1,154 @@
+$baseWidth: 360px;
+@function px2vw($px) {
+  @return $px / $baseWidth * 100 * 1vw;
+}
+@function px2rem($px) {
+  @return $px / $baseWidth * 10 * 1rem;
+}
+/* 
+  图片dpr处理
+@mixin bg-image($url) {
+  background-image: url($url + ".png");
+  // @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  //   background-image: url($url + "@2x.png");
+  // }
+  // @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  //   background-image: url($url + "@3x.png");
+  // }
+}
+*/
+/* 颜色 */
+$main-color: #705cd6;
+$font-color: #606266;
+$font-bold-color: #191f25;
+$table-cell-color: #636363;
+$cl-success: #67c23a;
+$cl-warning: #e6a23c;
+$cl-danger: #f56c6c;
+$cl-info: #909399;
+$cl-border: #ebebeb;
+$cl-h3: #303133;
+$cl-label: #4a4a4a;
+$cl-value: #636363;
+
+$cl-theme-color: #2382d2;
+// $cl-theme-color: red;
+// $cl-theme-color: #705CD6;
+$cl-body-bg: #ecedef;
+$cl-nav-text: #fff;
+$cl-sanjiao-bg: #1e6bae;
+$cl-icon-new: #f6a10b;
+$cl-newslist-icon-default: #ccc;
+$cl-newslist-title-default: #000;
+// $cl-newslist-title-default: #636363;
+$cl-newslist-title-today: #e64a3b;
+$cl-newslist-time: #a6a6a6;
+$cl-newsSection-border: #e6e6e6;
+
+$fs-newslist-title: 18px;
+// $fs-newslist-title: 16px;
+$fs-newsSection-title: 18px;
+
+.overflow-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.overflow-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.overflow-1 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+/* tab */
+.content-tabs-box
+  .content-tabs-header
+  .content-tab-item-container
+  .content-tab-item.tab-active {
+  border-bottom: 2px solid $main-color !important;
+  color: $main-color;
+  font-weight: bold;
+}
+.el-tabs__nav-wrap::after {
+  background-color: #fff !important;
+}
+
+/* 日期选择器边框 */
+.el-range-editor.el-input__inner {
+  border: 1px solid #dcdfe6;
+}
+
+/* 表格 el-table */
+.el-table {
+  &::before {
+    z-index: inherit;
+  }
+  .el-table__header-wrapper th {
+    background: #f4f5f6;
+    color: #303133;
+    font-weight: bold;
+  }
+  th.gutter {
+    background: #f4f5f6;
+  }
+  .el-table__row {
+    td {
+      padding: 6px 0;
+      color: $table-cell-color;
+    }
+  }
+
+  .el-table::before {
+    height: 0px;
+  }
+}
+/* 弹窗 */
+.el-dialog {
+  .el-dialog__header {
+    font-weight: bold;
+    border-bottom: 1px solid $cl-border;
+  }
+}
+/* 文件上传 文件列表 */
+.el-upload-list {
+  height: 100px;
+  width: 400px;
+  overflow: auto;
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 3px;
+}
+
+/* 滚动条有滑块的轨道部分 */
+::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+/* 滚动条滑块(竖向:vertical 横向:horizontal) */
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+/* 滚动条滑块hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #999999;
+}
+
+/* 同时有垂直和水平滚动条时交汇的部分 */
+::-webkit-scrollbar-corner {
+  display: block; /* 修复交汇时出现的白块 */
+}
