@@ -1,13 +1,17 @@
 import Vue from "vue"
 import VueRouter from "vue-router"
 
-const ContentManage = import("../pages/content-manage/index.vue")
+const ContentManage = () => import("../pages/content-manage/index.vue")
 
 const routes = [
   {
-    path: "/",
+    path: "/content-manage",
     component: ContentManage,
   },
+  {
+    path:"/",
+    redirect:"/content-manage"
+  }
 ]
 
 function scrollBehavior(to, from, savedPosition) {
